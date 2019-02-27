@@ -1,11 +1,6 @@
 def find_all(a, value):
     return [i for i, j in enumerate(a) if j == value]
 
-def read_array(file):
-    with open(str(file), 'r') as f:
-        arr = [int(x) for x in f.readline().split(", ")]
-        return arr
-
 def process(arr):
     first_max_index = find_all(arr, max(arr))[0]
     last_min_index = find_all(arr, min(arr))[-1]
