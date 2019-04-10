@@ -5,5 +5,5 @@ def read_array(file):
 
 def read_array2d(file):
     with open(str(file), 'r') as f:
-        lines = [line.split() for line in f]
+        lines = [[float(l) for l in line.split()] for line in f]
         return lines

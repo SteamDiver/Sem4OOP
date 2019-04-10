@@ -4,8 +4,9 @@ import sys
 sys.path.append('../Utils')
 import business
 import ioutils
+import my_parser
 
-file = sys.argv[1]
+file = my_parser.create_parser().parse_args().name
 arr = ioutils.read_array(file)
-print ('Input was %s' % arr)
-print ('Result was %s' % business.process(arr))
+print ('Inp was %s' % arr)
+print ('Res was %s' % business.solve(arr))
